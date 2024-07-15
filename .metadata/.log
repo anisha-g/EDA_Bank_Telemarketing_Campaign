@@ -1,0 +1,20 @@
+!SESSION 2024-07-13 18:16:42.626 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.knime.product 1 0 2024-07-15 17:07:34.492
+!MESSAGE ShellExec command: C:\Users\Anisha\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202401231642/bin/create_env.bat "C:\Users\Anisha\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202401231642\pkgs"
+
+!ENTRY org.knime.product 1 0 2024-07-15 17:07:34.493
+!MESSAGE ShellExec directory : C:\Users\Anisha\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202401231642/bin
+
+!ENTRY org.knime.product 1 0 2024-07-15 17:09:48.127
+!MESSAGE Standard output: Found KNIME_PYTHON_PACKAGE_REPO_URL=C:\Users\Anisha\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202401231642\pkgs, using packages from there for installation
+The extension is org_knime_pythonscripting
+The bundling home is set to: C:\Users\Anisha\AppData\Local\Programs\KNIME\bundling\envs
+The bundling_parent contains a backslash.
+The bundle path is set to: C:\Users\Anisha\AppData\Local\Programs\KNIME\bundling\envs\org_knime_pythonscripting
+

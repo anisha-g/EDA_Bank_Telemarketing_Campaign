@@ -1,0 +1,991 @@
+2024-07-10 17:39:33,958 : WARN  : comm-pool-thread-1 :  : Node : Excel Reader : 3:1 : Please specify a file
+2024-07-10 17:40:10,204 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-07-10 17:40:19,359 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-07-10 17:40:23,576 : ERROR : KNIME-Worker-0-Excel Reader 3:1 :  : Node : Excel Reader : 3:1 : Execute failed: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+	at org.knime.filehandling.core.node.table.reader.TypeMapperExceptionParser.parse(TypeMapperExceptionParser.java:84)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:202)
+	at org.knime.filehandling.core.node.table.reader.util.MultiTableRead.readTable(MultiTableRead.java:113)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:170)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.ExcelTableReaderNodeModel.execute(ExcelTableReaderNodeModel.java:106)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:149)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:200)
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.unsupportedOperationException(ExcelCell.java:194)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.getIntValue(ExcelCell.java:143)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:176)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 21 more
+2024-07-10 17:40:23,584 : WARN  : KNIME-Worker-0-Excel Reader 3:1 :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-07-10 17:40:57,651 : ERROR : KNIME-Worker-0-Excel Reader 3:1 :  : Node : Excel Reader : 3:1 : Execute failed: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+	at org.knime.filehandling.core.node.table.reader.TypeMapperExceptionParser.parse(TypeMapperExceptionParser.java:84)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:202)
+	at org.knime.filehandling.core.node.table.reader.util.MultiTableRead.readTable(MultiTableRead.java:113)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:170)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.ExcelTableReaderNodeModel.execute(ExcelTableReaderNodeModel.java:106)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:149)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:200)
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.unsupportedOperationException(ExcelCell.java:194)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.getIntValue(ExcelCell.java:143)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:176)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 21 more
+2024-07-10 17:40:57,653 : WARN  : KNIME-Worker-0-Excel Reader 3:1 :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-07-10 17:42:40,088 : ERROR : KNIME-Worker-1-Excel Reader 3:1 :  : Node : Excel Reader : 3:1 : Execute failed: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10472' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [Life Made WI-Fi Touchscreen Photo Frame (STRING), 1.9 (DOUBLE), 19 (INT), 3.0M (STRING), 21516.5295243302 (DOUBLE), Free (STRING), 0 (INT), Everyone (STRING), null, February 11, 2018 (STRING), 1.0.19 (STRING), 4.0 and up (STRING), null]
+	at org.knime.filehandling.core.node.table.reader.TypeMapperExceptionParser.parse(TypeMapperExceptionParser.java:84)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:202)
+	at org.knime.filehandling.core.node.table.reader.util.MultiTableRead.readTable(MultiTableRead.java:113)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:170)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.ExcelTableReaderNodeModel.execute(ExcelTableReaderNodeModel.java:106)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:149)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:200)
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: Datatype 'STRING' does not support this call.
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.unsupportedOperationException(ExcelCell.java:194)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelCell.getIntValue(ExcelCell.java:143)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:176)
+	at org.knime.ext.poi3.node.io.filehandling.excel.reader.read.ExcelReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(ExcelReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 21 more
+2024-07-10 19:05:46,863 : WARN  : comm-pool-thread-8 :  : Node : Row Filter : 3:2 : No row filter specified
+2024-07-10 19:07:51,477 : WARN  : KNIME-Worker-3-Row Filter 3:2 :  : Node : Row Filter : 3:2 : Node created an empty data table.
+2024-07-10 19:16:06,185 : WARN  : KNIME-Worker-6-Missing Value 3:4 :  : Node : Missing Value : 3:4 : Column "Current Ver" still contains missing values.
+Column "Rating" still contains missing values.
+Column "Android Ver" still contains missing values.
+Column "Type" still contains missing values.
+Column "Content Rating" still contains missing values.
+2024-07-11 12:50:47,597 : WARN  : KNIME-Worker-7-Missing Value 3:4 :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "Content Rating" still contains missing values.
+2024-07-11 15:02:04,681 : WARN  : ModalContext :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "Content Rating" still contains missing values.
+2024-07-11 15:12:18,033 : WARN  : comm-pool-thread-6 :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:12:21,053 : WARN  : KNIME-Worker-1-String to Number 3:5 :  : Node : String to Number : 3:5 : No columns selected, returning input table.
+2024-07-11 15:14:34,177 : WARN  : comm-pool-thread-14 :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:25:11,380 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:25:29,610 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:26:25,939 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:26:49,389 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Syntax error, insert ";" to complete BlockStatements
+  Line : 66    public java.lang.String internalEvaluate() throws Abort {
+  Line : 67  return regexReplace(__col7,"\\$", "")
+
+ERROR at line 68
+Syntax error, insert ";" to complete Statement
+  Line : 67  return regexReplace(__col7,"\\$", "")
+  Line : 68  replace(__col5,"," ,"" )
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:27:03,141 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 68
+Unreachable code
+  Line : 67  return regexReplace(__col7,"\\$", "");
+  Line : 68  replace(__col5,"," ,"" );
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:28:07,807 : WARN  : main :  : WrappedNodeDialog : String Manipulation (Multi Column) : 3:6 : failed to apply settings: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Unreachable code
+  Line : 66  return regexReplace(__col7,"\\$", "");
+  Line : 67  ;
+org.knime.core.node.InvalidSettingsException: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Unreachable code
+  Line : 66  return regexReplace(__col7,"\\$", "");
+  Line : 67  ;
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:264)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1095)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:961)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:868)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 67
+Unreachable code
+  Line : 66  return regexReplace(__col7,"\\$", "");
+  Line : 67  ;
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.ext.sun.nodes.script.settings.JavaScriptingSettings.setInputAndCompile(JavaScriptingSettings.java:432)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationCalculator.create(MultiColumnStringManipulationCalculator.java:274)
+	at org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeModel.validateSettings(MultiColumnStringManipulationNodeModel.java:256)
+	... 53 more
+2024-07-11 15:28:15,831 : WARN  : main :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:28:18,214 : WARN  : main :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:28:23,819 : WARN  : KNIME-Worker-2-String Manipulation (Multi Column) 3:6 :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:39:35,213 : ERROR : Clear OSGi configuration :  : InvokeInstallSiteAction :  :  : Could not clean OSGi configuration area: C:\Users\Anisha\AppData\Local\Programs\KNIME\configuration\org.eclipse.osgi\131\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2024-07-11 15:40:08,952 : WARN  : ModalContext :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "Content Rating" still contains missing values.
+2024-07-11 15:40:08,965 : WARN  : ModalContext :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:40:08,968 : WARN  : ModalContext :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:45:15,811 : WARN  : comm-pool-thread-5 :  : Node : String to Number : 3:5 : No columns selected
+2024-07-11 15:48:03,021 : WARN  : KNIME-Worker-1-Column Expressions 3:7 :  : Node : Column Expressions : 3:7 : An error occurred in script 1:
+Reference error: '$Price$' is not defined (line 1):
+regexReplace($Price$, "[^0-9.]", "")
+2024-07-11 15:51:52,211 : WARN  : KNIME-Worker-2-Column Expressions 3:7 :  : Node : Column Expressions : 3:7 : An error occurred in script 1:
+Reference error: '$Installs$' is not defined (line 2):
+toDouble(regexReplace($Installs$, "[^0-9.]", ""))
+2024-07-11 15:52:54,145 : WARN  : KNIME-Worker-2-Column Expressions 3:7 :  : Node : Column Expressions : 3:7 : An error occurred in script 1:
+Reference error: '$Installs$' is not defined (line 2):
+toDouble(regexReplace($Installs$, "[^0-9.]", ""))
+2024-07-12 07:23:15,192 : ERROR : KNIME-Worker-12-Column Expressions 3:7 :  : Node : Column Expressions : 3:7 : Execute failed: For input string: "4.99"
+java.lang.NumberFormatException: For input string: "4.99"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at org.knime.expressions.base.sets.string.StringExpressionJavaMethodProvider.toInt(StringExpressionJavaMethodProvider.java:625)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$303$20965A$\^eval\_.toInt(<eval>:513)
+	at org.openjdk.nashorn.internal.scripts.Script$295$\^eval\_.:program(<eval>:1)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:646)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:442)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine$1.eval(NashornScriptEngine.java:503)
+	at java.scripting/javax.script.CompiledScript.eval(Unknown Source)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:122)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:1)
+	at org.knime.expressions.base.node.formulas.MultiExpressionCellFactory.getCells(MultiExpressionCellFactory.java:191)
+	at org.knime.core.data.container.CellFactory.getCells(CellFactory.java:98)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.expressions.base.node.formulas.FormulasNodeModel.execute(FormulasNodeModel.java:143)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-12 07:24:41,146 : ERROR : KNIME-Worker-12-Column Expressions 3:7 :  : Node : Column Expressions : 3:7 : Execute failed: For input string: "$4.99"
+java.lang.NumberFormatException: For input string: "$4.99"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(Unknown Source)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(Unknown Source)
+	at java.base/java.lang.Double.parseDouble(Unknown Source)
+	at org.knime.expressions.base.sets.string.StringExpressionJavaMethodProvider.toDouble(StringExpressionJavaMethodProvider.java:582)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$383$20368A$\^eval\_.toDouble(<eval>:500)
+	at org.openjdk.nashorn.internal.scripts.Script$373$\^eval\_.:program(<eval>:1)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:646)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:442)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine$1.eval(NashornScriptEngine.java:503)
+	at java.scripting/javax.script.CompiledScript.eval(Unknown Source)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:122)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:1)
+	at org.knime.expressions.base.node.formulas.MultiExpressionCellFactory.getCells(MultiExpressionCellFactory.java:191)
+	at org.knime.core.data.container.CellFactory.getCells(CellFactory.java:98)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.expressions.base.node.formulas.FormulasNodeModel.execute(FormulasNodeModel.java:143)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-13 13:16:32,923 : WARN  : ModalContext :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "Content Rating" still contains missing values.
+2024-07-13 18:17:12,108 : WARN  : ModalContext :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "Content Rating" still contains missing values.
+2024-07-13 18:18:16,501 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:11 : Please specify a file
+2024-07-13 18:26:42,061 : WARN  : comm-pool-thread-5 :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 16:37:28,242 : ERROR : KNIME-Worker-2-Column Expressions 3:12 :  : Node : Column Expressions : 3:12 : Execute failed: An error occurred in script 1:
+Column 'Installs' is unknown.
+java.lang.RuntimeException: An error occurred in script 1:
+Column 'Installs' is unknown.
+	at org.knime.expressions.base.node.formulas.MultiExpressionCellFactory.getCells(MultiExpressionCellFactory.java:204)
+	at org.knime.core.data.container.CellFactory.getCells(CellFactory.java:98)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.expressions.base.node.formulas.FormulasNodeModel.execute(FormulasNodeModel.java:143)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.expressions.core.exceptions.InvalidAccessException: Column 'Installs' is unknown.
+	at org.knime.expressions.core.columnaccess.AccessUtils.getColumnContent(AccessUtils.java:276)
+	at org.knime.expressions.core.columnaccess.AccessUtils.getColumn(AccessUtils.java:124)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$18$31713A$\^eval\_.column(<eval>:787)
+	at org.openjdk.nashorn.internal.scripts.Script$13$\^eval\_.:program(<eval>:1)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:646)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:442)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine$1.eval(NashornScriptEngine.java:503)
+	at java.scripting/javax.script.CompiledScript.eval(Unknown Source)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:122)
+	at org.knime.expressions.core.DefaultFunctionScript.apply(DefaultFunctionScript.java:1)
+	at org.knime.expressions.base.node.formulas.MultiExpressionCellFactory.getCells(MultiExpressionCellFactory.java:191)
+	... 21 more
+2024-07-14 18:38:47,636 : WARN  : comm-pool-thread-10 :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 18:38:49,287 : WARN  : AWT-EventQueue-0 :  : ColumnHandlingFactorySelectionPanel : Missing Value : 3:4 : get warnings during panel validation: [Some columns no longer exist (red bordered)]
+2024-07-14 18:38:49,296 : WARN  : AWT-EventQueue-0 :  : ColumnHandlingFactorySelectionPanel : Missing Value : 3:4 : get warnings during panel validation: [Some columns no longer exist (red bordered)]
+2024-07-14 18:38:49,299 : WARN  : AWT-EventQueue-0 :  : ColumnHandlingFactorySelectionPanel : Missing Value : 3:4 : get warnings during panel validation: [Some columns no longer exist (red bordered)]
+2024-07-14 18:39:10,539 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 18:39:11,528 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 18:39:13,800 : WARN  : KNIME-Worker-3-Missing Value 3:4 :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "month" still contains missing values.
+Column "response" still contains missing values.
+2024-07-14 19:14:44,069 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 19:14:52,703 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 19:14:54,439 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 19:14:56,767 : WARN  : KNIME-Worker-4-Missing Value 3:4 :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+Column "response" still contains missing values.
+2024-07-14 19:19:52,595 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 19:19:53,825 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 6: Not a column: Rating
+$Rating$ < 0 => FALSE
+^
+2024-07-14 19:19:55,800 : WARN  : KNIME-Worker-5-Missing Value 3:4 :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+2024-07-14 19:54:21,682 : WARN  : main :  : Node : Rule-based Row Filter : 3:8 : Line: 5: Not a column: Reviews
+$Reviews$ > $Installs$ => FALSE
+^
+2024-07-14 19:54:25,028 : WARN  : KNIME-Worker-6-Column Expressions 3:7 :  : Node : Rule-based Row Filter : 3:8 : Line: 5: Not a column: Reviews
+$Reviews$ > $Installs$ => FALSE
+^
+2024-07-14 19:56:39,863 : WARN  : main :  : Node : Box Plot : 3:9 : The selected dimension column "Price" does not exist in the table
+2024-07-14 19:56:39,864 : WARN  : main :  : Node : Histogram : 3:10 : The selected column "Reviews" does not exist in the table
+2024-07-14 19:56:41,040 : WARN  : main :  : Node : Box Plot : 3:9 : The selected dimension column "Price" does not exist in the table
+2024-07-14 19:56:41,041 : WARN  : main :  : Node : Histogram : 3:10 : The selected column "Reviews" does not exist in the table
+2024-07-14 19:56:42,587 : WARN  : KNIME-Worker-7-Rule-based Row Filter 3:8 :  : Node : Rule-based Row Filter : 3:8 : Node created an empty data table.
+2024-07-14 19:56:42,588 : WARN  : KNIME-Worker-7-Rule-based Row Filter 3:8 :  : Node : Box Plot : 3:9 : The selected dimension column "Price" does not exist in the table
+2024-07-14 19:56:42,588 : WARN  : KNIME-Worker-7-Rule-based Row Filter 3:8 :  : Node : Histogram : 3:10 : The selected column "Reviews" does not exist in the table
+2024-07-14 19:59:34,201 : WARN  : main :  : WrappedNodeDialog : Rule-based Row Filter : 3:8 : failed to apply settings: line 6, col 5: Expected an operator
+org.knime.core.node.InvalidSettingsException: line 6, col 5: Expected an operator
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 6, col 5: Expected an operator
+	at org.knime.base.node.rules.engine.BaseRuleParser$ParseState.parseOperator(BaseRuleParser.java:527)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseRelation(BaseRuleParser.java:846)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseRootBooleanExpression(BaseRuleParser.java:757)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseAndExpression(BaseRuleParser.java:712)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseXorExpression(BaseRuleParser.java:689)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseOrExpression(BaseRuleParser.java:666)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseBooleanExpression(BaseRuleParser.java:654)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parseCondition(SimpleRuleParser.java:278)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:230)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-07-14 20:00:14,208 : WARN  : main :  : WrappedNodeDialog : Rule-based Row Filter : 3:8 : failed to apply settings: line 5, col 5: Expected: =>
+org.knime.core.node.InvalidSettingsException: line 5, col 5: Expected: =>
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 5, col 5: Expected: =>
+	at org.knime.base.node.rules.engine.BaseRuleParser$ParseState.consumeText(BaseRuleParser.java:292)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parseOutcome(SimpleRuleParser.java:262)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:232)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-07-14 20:01:43,208 : ERROR : KNIME-Worker-8-Box Plot 3:9 :  : Node : Box Plot : 3:9 : Execute failed: The input table does not have any rows.
+org.knime.core.node.InvalidSettingsException: The input table does not have any rows.
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:239)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:222)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.onExecute(BoxPlotNodeFactory.java:181)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-14 20:01:45,210 : ERROR : KNIME-Worker-8-Box Plot 3:9 :  : Node : Box Plot : 3:9 : Execute failed: The input table does not have any rows.
+org.knime.core.node.InvalidSettingsException: The input table does not have any rows.
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:239)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:222)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.onExecute(BoxPlotNodeFactory.java:181)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-14 20:03:09,056 : ERROR : KNIME-Worker-8-Box Plot 3:9 :  : Node : Box Plot : 3:9 : Execute failed: The input table does not have any rows.
+org.knime.core.node.InvalidSettingsException: The input table does not have any rows.
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:239)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:222)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.onExecute(BoxPlotNodeFactory.java:181)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-14 20:04:01,915 : WARN  : KNIME-Worker-8-Histogram 3:10 :  : Node : Histogram : 3:10 : Table has no rows. Check input table.
+2024-07-14 20:04:01,965 : WARN  : KNIME-Worker-8-Histogram 3:10 :  : Node : Histogram : 3:10 : Filtered table has no rows. Check the lower and upper bounds in the configuration dialog.
+2024-07-14 22:42:13,752 : ERROR : KNIME-Worker-26-Bar Chart 3:14:14 :  : CEFHeadlessUtil : Bar Chart : 3:14:14 : Timeout during image generation. Employing fallback strategy of capturing a screenshot. Note that the returned image might not be rendered completely.
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.knime.js.cef.headless.CEFHeadlessUtil.generateContent(CEFHeadlessUtil.java:215)
+	at org.knime.js.cef.headless.CEFHeadlessUtil.generatePng(CEFHeadlessUtil.java:115)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:242)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-15 15:35:59,219 : ERROR : KNIME-Worker-35-Heatmap 3:14:21 :  : Node : Heatmap : 3:14:21 : Execute failed: The selected horizontal and vertical axis column contain duplicate value pairs and “None” aggregation method is selected.
+org.knime.core.node.InvalidSettingsException: The selected horizontal and vertical axis column contain duplicate value pairs and “None” aggregation method is selected.
+	at org.knime.base.views.node.heatmap.HeatmapNodeFactory.execute(HeatmapNodeFactory.java:154)
+	at org.knime.base.views.node.heatmap.HeatmapNodeFactory.lambda$1(HeatmapNodeFactory.java:98)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-07-15 17:11:16,309 : ERROR : Clear OSGi configuration :  : InvokeInstallSiteAction :  :  : Could not clean OSGi configuration area: C:\Users\Anisha\AppData\Local\Programs\KNIME\configuration\org.eclipse.osgi\290\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2024-07-15 17:56:32,475 : WARN  : ModalContext :  : Node : Missing Value : 3:4 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+2024-07-15 17:58:29,747 : WARN  : comm-pool-thread-2 :  : Node : Math Formula : 3:14:24 : No configuration available
+2024-07-15 18:03:36,767 : WARN  : comm-pool-thread-5 :  : Node : Math Formula : 3:14:24 : No configuration available
+2024-07-15 18:03:49,090 : WARN  : comm-pool-thread-5 :  : Node : Linear Correlation : 3:14:26 : Auto configuration: Using all suitable columns (in total 3)
+2024-07-15 18:04:13,711 : WARN  : comm-pool-thread-6 :  : Node : Heatmap : 3:14:21 : The selected horizontal dimension column "age" does not exist in the table
+2024-07-15 18:04:42,512 : WARN  : main :  : Node : Heatmap : 3:14:21 : The selected horizontal dimension column "age" does not exist in the table
+2024-07-15 18:04:44,538 : WARN  : main :  : Node : Heatmap : 3:14:21 : The selected horizontal dimension column "age" does not exist in the table
+2024-07-15 18:04:46,869 : WARN  : KNIME-Worker-2-Linear Correlation 3:14:26 :  : Node : Heatmap : 3:14:21 : The selected horizontal dimension column "age" does not exist in the table
+2024-07-15 23:25:30,431 : WARN  : comm-pool-thread-17 :  : Node : Linear Correlation : 3:14:33 : No columns selected
+2024-07-15 23:25:32,526 : WARN  : KNIME-Worker-7-Column Filter 3:14:32 :  : Node : Linear Correlation : 3:14:33 : No columns selected

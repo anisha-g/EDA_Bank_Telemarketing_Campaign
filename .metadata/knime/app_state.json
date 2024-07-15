@@ -1,0 +1,12 @@
+{
+  "version" : "5.2.5.v202405310911",
+  "projects" : [ {
+    "name" : "data visualization",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "data visualization"
+    }
+  } ]
+}
